@@ -11,7 +11,6 @@ The tests cover:
   - Misspelled or non-existent county.
   - County that exists but is **outside California**.
 
-This document focuses on **behavior and test cases**, not on running the script in a live environment.
 
 ---
 
