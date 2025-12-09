@@ -179,3 +179,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+```
+![DHCS Dental Reports page](images/poc_file.png)
+
+![Downloaded DHCS PDF](images/poc_downloaded_data.png)
