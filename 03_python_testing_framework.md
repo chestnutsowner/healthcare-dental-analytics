@@ -281,3 +281,69 @@ A bar chart is displayed with one bar per age band (10–14, 15–18, 19–20, 2
 No error messages are shown.
 
 ![San Diego console and chart](images/sd_datavis.png)
+
+### 4.3 Test Case 3 – Validate Error Message for Misspelled / Non-Existent County
+
+Objective
+Verify that the script displays an appropriate error message when the county name is misspelled or does not exist in the DHCS California dataset.
+
+Test Steps
+
+User opens healthcare_adv_vis.py in an IDE or terminal.
+
+User runs:
+```
+python healthcare_adv_vis.py
+```
+
+When prompted to enter a county name, user inputs a misspelled value, for example:
+```
+Loz Angeles
+```
+
+Script checks the county against the set of known California counties and NON_CA_COUNTIES.
+
+User inspects console output.
+
+Expected Result
+
+No bar chart is displayed.
+
+The script prints an error message similar to:
+
+Error: County 'Loz Angeles' not found in the DHCS California dataset. Check spelling or ensure you are using a valid California county name.
+
+![Misspelled county error](images/mdsd_county_doesnt_exist.png)
+
+### 4.4 Test Case 4 – Validate Error Message for County Outside California
+
+Objective
+Verify that the script displays an appropriate error message when a county exists but is outside California (not in the DHCS dataset).
+
+Test Steps
+
+User opens healthcare_adv_vis.py in an IDE or terminal.
+
+User runs:
+```
+python healthcare_adv_vis.py
+```
+
+When prompted to enter a county name, user inputs a known non-California county included in NON_CA_COUNTIES, for example:
+```
+Clark
+```
+
+Script determines that the county is not in the California county list but is in NON_CA_COUNTIES.
+
+User inspects console output.
+
+Expected Result
+
+No bar chart is displayed.
+
+The script prints an error message similar to:
+
+Error: County 'Clark' exists but is not a California county in the DHCS dataset. Please enter a county within California.
+
+![Non-CA county error](images/mdsd_county_name_error.png)
