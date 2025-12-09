@@ -1,54 +1,34 @@
-# healthcare-dental-analytics
-“End-to-end project using Selenium, BigQuery, and Python testing framework with DHCS dental utilization data.”
-# HealthCare Dental Utilization – Automation, SQL, and Testing
+# HealthCare Dental Utilization – Automation, SQL & Testing (Portfolio Documentation)
 
-This project simulates an end-to-end workflow for a junior systems/data analyst working with
-California DHCS Medi-Cal dental utilization data.
-
-It is split into three parts:
+This repository is a **documentation-first portfolio project** showing end-to-end thinking as a junior systems/data analyst:
 
 1. **Automation (Python + Selenium)**  
-   - Automates navigation to the DHCS Dental Reports page  
-   - Locates the latest **Dental FFS and DMC Performance Fact Sheet**  
-   - Downloads the latest PDF to a local folder  
-   - Includes documentation and screenshots
+   Automate downloading the latest *Dental FFS and DMC Performance Fact Sheet* from the California DHCS website.
 
 2. **SQL & BigQuery Analysis**  
-   - Loads the DHCS *Medi-Cal Dental Utilization and Sealants by County* dataset into BigQuery  
-   - Cleans and types the raw CSV into an analysis-ready table (`mdsd_clean`)  
-   - Splits data into two time windows (2013–2017, 2018–2021)  
-   - Joins and aggregates Annual Dental Visits (ADV) for **Los Angeles** and **San Diego**  
-   - Creates a view for downstream visualizations  
-   - Includes documentation and screenshots of the final charts
+   Clean, split, join, and analyze Medi-Cal dental utilization data by county and age group in BigQuery, focusing on Los Angeles and San Diego.
 
 3. **Testing Framework (Python + BigQuery)**  
-   - Python script (`healthcare_adv_vis.py`) that:
-     - Accepts a county name as input
-     - Validates it against California counties in `mdsd_clean`
-     - Queries `dental_joined_periods` for Ages 10–44
-     - Visualizes ADV totals by age group using matplotlib
-     - Handles invalid inputs with clear error messages
-   - Manual test cases covering:
-     - Los Angeles (happy path)
-     - San Diego (happy path)
-     - Misspelled / non-existent county
-     - County outside California
-   - Includes test documentation and screenshots
+   Define a simple Python script and manual test cases to validate visualization of Annual Dental Visits for Ages 10–44, including error handling for bad inputs.
 
-## Repository Structure
+> This repo is intentionally **documentation + screenshots only** – it’s a *proof of knowledge* and process, not a runnable production system.
 
-```text
-automation/
-  automation_download_dhcs.py
-  Automation_Project_Python_Selenium_Documentation.docx
-  screenshots/
+---
 
-sql/
-  bigquery_healthcare.sql
-  BigQuery_Medical_Data_Documentation.docx
-  screenshots/
+## Contents
 
-testing/
-  healthcare_adv_vis.py
-  HealthCare_Project_Testing_Framework_Documentation.docx
-  screenshots/
+- [01 – Automation (Python & Selenium)](01_automation_selenium.md)  
+- [02 – SQL & BigQuery Analysis](02_bigquery_sql_analysis.md)  
+- [03 – Testing Framework (Python & BigQuery)](03_python_testing_framework.md)
+
+Screenshots used in the docs are stored in the [`images/`](images/) folder.
+
+---
+
+## Skills Demonstrated
+
+- **Web automation:** Selenium WebDriver, download handling, DOM interaction.
+- **Cloud analytics:** BigQuery SQL for cleaning, transforming, and aggregating a large public dataset.
+- **Data modeling:** Splitting a multi-year dataset into time windows, joining and aggregating by county and age.
+- **Testing mindset:** Defining explicit test cases (happy path + error cases) for a data visualization script.
+- **Documentation:** Writing objective, business purpose, and technical steps in a structured, stakeholder-friendly way.
