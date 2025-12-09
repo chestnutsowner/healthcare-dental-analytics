@@ -230,4 +230,4 @@ SELECT *
 FROM `wide-hexagon-480521-b5.healthcare_project.adv_la_sd_by_age`
 ORDER BY county, age_filter;
 ```
-![LA vs SD Annual Dental Visits by Age Group and Period](images/detal_datav.png)
+![LA vs SD Annual Dental Visits by Age Group and Period](images/dental_datav.png)
