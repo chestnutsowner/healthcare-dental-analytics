@@ -246,3 +246,38 @@ Age 21–34
 Age 35–44
 
 ![LA console and chart](images/la_datavis.png)
+
+### 4.2 Test Case 2 – Validate San Diego Annual Dental Visits (Ages 10–44)
+
+Objective
+Verify that the script correctly displays the total number of Annual Dental Visits for Ages 10–44 in San Diego County and produces a bar chart by age group.
+
+Test Steps
+
+User opens healthcare_adv_vis.py in an IDE or terminal.
+
+User runs:
+```
+python healthcare_adv_vis.py
+```
+
+When prompted to enter a county name, user inputs:
+```
+San Diego
+```
+
+Script executes, queries BigQuery, and prints the total and breakdown by age group.
+
+User inspects the bar chart titled:
+
+Annual Dental Visits (Ages 10–44) – County: San Diego
+
+Expected Result
+
+The script displays a total count of Annual Dental Visits for Ages 10–44 in San Diego County.
+
+A bar chart is displayed with one bar per age band (10–14, 15–18, 19–20, 21–34, 35–44).
+
+No error messages are shown.
+
+![San Diego console and chart](images/sd_datavis.png)
